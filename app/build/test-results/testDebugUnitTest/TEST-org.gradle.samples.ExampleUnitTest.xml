@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.gradle.samples.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-12T12:51:13" hostname="codespaces-2dcd2e" time="0.013">
+  <properties/>
+  <testcase name="addition_isCorrect" classname="org.gradle.samples.ExampleUnitTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

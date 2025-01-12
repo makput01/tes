@@ -1,0 +1,17 @@
+org.gradle.samples.app-core-1.3.1-0 /home/codespace/.gradle/caches/8.12/transforms/00f2c3f73df8995be98288778e2b7d45/transformed/core-1.3.1/res
+org.gradle.samples.app-constraintlayout-2.0.4-1 /home/codespace/.gradle/caches/8.12/transforms/1680d5dc1db4eb0a3cf68c27fd220b58/transformed/constraintlayout-2.0.4/res
+org.gradle.samples.app-cardview-1.0.0-2 /home/codespace/.gradle/caches/8.12/transforms/20b861b90a8d71ba7c7251985cae6f0c/transformed/cardview-1.0.0/res
+org.gradle.samples.app-transition-1.2.0-3 /home/codespace/.gradle/caches/8.12/transforms/4498c06f0b8a9a2a704498348fbe984e/transformed/transition-1.2.0/res
+org.gradle.samples.app-material-1.2.0-4 /home/codespace/.gradle/caches/8.12/transforms/621921909dc63542a80b1d2d7feb3f62/transformed/material-1.2.0/res
+org.gradle.samples.app-jetified-viewpager2-1.0.0-5 /home/codespace/.gradle/caches/8.12/transforms/9608880bfdc5cf8925313bf2e45f44e0/transformed/jetified-viewpager2-1.0.0/res
+org.gradle.samples.app-recyclerview-1.1.0-6 /home/codespace/.gradle/caches/8.12/transforms/b4fe567297dc063e381c2c2afabd015f/transformed/recyclerview-1.1.0/res
+org.gradle.samples.app-coordinatorlayout-1.1.0-7 /home/codespace/.gradle/caches/8.12/transforms/b8a10e2370ed2f3cec18348e6aa76770/transformed/coordinatorlayout-1.1.0/res
+org.gradle.samples.app-jetified-appcompat-resources-1.2.0-8 /home/codespace/.gradle/caches/8.12/transforms/c477b478ca33971a36855dd7c722ff41/transformed/jetified-appcompat-resources-1.2.0/res
+org.gradle.samples.app-appcompat-1.2.0-9 /home/codespace/.gradle/caches/8.12/transforms/d3b3f4d917639bc17b9375630185c535/transformed/appcompat-1.2.0/res
+org.gradle.samples.app-pngs-10 /workspaces/tes/app/build/generated/res/pngs/debug
+org.gradle.samples.app-resValues-11 /workspaces/tes/app/build/generated/res/resValues/debug
+org.gradle.samples.app-packageDebugResources-12 /workspaces/tes/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+org.gradle.samples.app-packageDebugResources-13 /workspaces/tes/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+org.gradle.samples.app-debug-14 /workspaces/tes/app/build/intermediates/merged_res/debug/mergeDebugResources
+org.gradle.samples.app-debug-15 /workspaces/tes/app/src/debug/res
+org.gradle.samples.app-main-16 /workspaces/tes/app/src/main/res
