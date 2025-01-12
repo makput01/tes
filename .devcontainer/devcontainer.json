@@ -1,7 +1,6 @@
 {
-"name": "Tes",
-"features": { 
-"ghcr.io/devcontainers/features/java:1": {},
-"ghcr.io/devcontainers/features/java:1": {}
-}
+  "name": "Simplest complex app",
+  "features": {
+    "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {}
+},
 }
