@@ -1,4 +1,7 @@
 {
 "name": "Tes",
-"features": { "ghcr.io/devcontainers/templates/java:4.0.2": {} }
+"features": { 
+"ghcr.io/devcontainers/features/java:1": {},
+"ghcr.io/devcontainers/features/java:1": {}
+}
 }
