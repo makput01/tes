@@ -1,0 +1,4 @@
+{
+"name": "Tes",
+"features": { "ghcr.io/devcontainers/templates/java:4.0.2": {} }
+}
