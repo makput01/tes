@@ -2,5 +2,6 @@
   "name": "Simplest complex app",
   "features": {
     "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {}
-},
+ },
+ "postCreateCommand": "echo halo"
 }
