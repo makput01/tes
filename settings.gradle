@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'tes'
-include('app')
+include(':app')

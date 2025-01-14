@@ -7,7 +7,7 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
+    id 'com.android.application'
 }
 
 repositories {
@@ -32,12 +32,3 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'org.example.App'
-}
-
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
-}
