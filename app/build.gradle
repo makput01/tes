@@ -1,6 +1,4 @@
-plugins {
-    id 'com.android.application' apply false
-}
+apply plugin: 'com.android.application'
 
 android {
     compileSdk = 30
