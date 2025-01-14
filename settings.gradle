@@ -6,4 +6,3 @@
  */
 
 rootProject.name = 'tes'
-include ':app'
