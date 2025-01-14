@@ -2,6 +2,10 @@ plugins {
     id 'com.android.application' version '8.x.x' apply false
 }
 
+repositories {
+    google()
+}
+
 android {
     namespace 'dev.bonigarcia.android.basic'
     compileSdk 34
