@@ -14,5 +14,6 @@ android {
         compileSdkVersion = 30
 	namespace = 'com.tes'
 	applicationId = 'com.tes'
-    }
+}
+
 }
