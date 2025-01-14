@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.application' apply false
+}
+
+android {
+    compileSdk = 30
+    defaultConfig {
+        applicationId = 'com.tes'
+        namespace = 'com.tes'
+        minSdk = 16
+        targetSdk = 30
+        versionCode = 1
+        versionName = '1.0'
+    }
