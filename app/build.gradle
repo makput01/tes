@@ -2,6 +2,11 @@ plugins {
     id('com.android.application') version '8.3.0'
 }
 
+repositories {
+    google()
+    mavencentral()
+}
+
 android {
     compileSdk = 30
     defaultConfig {
