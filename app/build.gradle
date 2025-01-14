@@ -6,17 +6,26 @@
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'com.android.application'
+    id('com.android.application') version '8.3.0'
+}
+
+android {
+    compileSdk = 30
+    defaultConfig {
+        applicationId = 'org.gradle.samples'
+        namespace = 'org.gradle.samples'
+        minSdk = 16
+        targetSdk = 30
+        versionCode = 1
+        versionName = '1.0'
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+    }
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
     google()
-    gradlePluginPortal()
+    mavenCentral()
 }
-
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
