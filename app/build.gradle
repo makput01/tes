@@ -12,6 +12,17 @@ android {
     namespace 'dev.bonigarcia.android.basic'
     compileSdk 34
 
+    signingConfigs {
+	release {
+	    storeFile(file(".keystore"))
+	    storePassword("123456")
+	}
+    }
+    buildTypes {
+	release {
+	    signingConfig signingConfigs.release
+	}
+    }
     defaultConfig {
         applicationId "dev.bonigarcia.android.basic"
         minSdk 21
