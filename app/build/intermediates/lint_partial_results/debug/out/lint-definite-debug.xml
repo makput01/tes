@@ -2,6 +2,27 @@
 <incidents format="6" by="lint 8.1.0" type="incidents">
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="20"
+            column="6"
+            startOffset="816"
+            endLine="20"
+            endColumn="14"
+            endOffset="824"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -19,27 +40,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="20"
-            column="6"
-            startOffset="816"
-            endLine="20"
-            endColumn="14"
-            endOffset="824"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="20"
