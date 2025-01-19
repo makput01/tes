@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     public String GameActivity = "com.unity3d.player.UnityPlayerActivity";
     public boolean hasLaunched = false;
 
-    public static String URL = "http://verifmod.wuaze.com/";
+    public static String URL = "http://verifmod.wuaze.com/login.php";
 
     //Load lib
     static {
