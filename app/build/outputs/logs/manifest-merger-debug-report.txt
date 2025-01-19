@@ -1,0 +1,85 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:4:5-21
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:6:5-78
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:6:22-75
+uses-permission#android.permission.INTERNET
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:8:22-78
+application
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:9:5-26:19
+	android:supportsRtl
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:12:9-41
+	android:icon
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:10:9-35
+activity#uk.lgl.MainActivity
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:14:9-19:20
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:14:19-53
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:15:13-18:29
+action#android.intent.action.MAIN
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:17:27-74
+service#uk.lgl.modmenu.FloatingModMenuService
+ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:20:9-24:43
+	android:enabled
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:22:13-35
+	android:exported
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:23:13-37
+	android:stopWithTask
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:24:13-40
+	android:name
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml:21:13-65
+uses-sdk
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		ADDED from /workspaces/tes/app/src/main/AndroidManifest.xml
+		INJECTED from /workspaces/tes/app/src/main/AndroidManifest.xml
