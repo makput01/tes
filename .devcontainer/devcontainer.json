@@ -1,8 +1,0 @@
-
-{
-  "name": "Node.js",
-  "features": {
-    "cr.io/ebaskoro/devcontainer-features/sdkman:1"
-  },
-  "postCreateCommand": "echo 'halobang'"
-}
