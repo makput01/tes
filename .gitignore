@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 # Ignore Gradle project-specific cache directory
 .gradle
 
 # Ignore Gradle build output directory
 build
+<<<<<<< HEAD
 =======
 # Built application files
 *.aar
@@ -92,3 +92,5 @@ lint/tmp/
 
 .idea
 >>>>>>> origin/master
+=======
+>>>>>>> origin
