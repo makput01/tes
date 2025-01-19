@@ -286,7 +286,7 @@ public class MainActivity extends Activity {
                     return res.split("\\|");
                 }
 
-		}
+		
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
