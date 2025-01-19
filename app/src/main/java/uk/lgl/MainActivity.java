@@ -267,7 +267,7 @@ public class MainActivity extends Activity {
                     
 
                     //Requires okhttp dependency
-                public String[] login(String user, String pass) throws IOException {
+                public String[] login(String user, String pass) {
                     OkHttpClient client = new OkHttpClient();
                     RequestBody formBody = new FormBody.Builder()
                             .add("user", user)
