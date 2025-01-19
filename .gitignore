@@ -3,7 +3,8 @@
 
 # Ignore Gradle build output directory
 #build
-
+build/
+build
 # Files for the ART/Dalvik VM
 *.dex
 
