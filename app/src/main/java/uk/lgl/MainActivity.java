@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     public String GameActivity = "com.unity3d.player.UnityPlayerActivity";
     public boolean hasLaunched = false;
 
-    public static String URL = "https://example.com/login.php";
+    public static String URL = "https://bb30e0fa-8b4c-4de4-af4d-6312b3aad28b-00-2pnzx9yk07v56.sisko.repl.co/";
 
     //Load lib
     static {
