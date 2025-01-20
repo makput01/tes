@@ -244,30 +244,10 @@ public class MainActivity extends Activity {
                         edit.putBoolean("RememberMe", isChecked);
                         edit.apply();
 
-			//try {
-                            //// String[] result = this.login(user, pass);
-                            //String[] result = urlRequest(MainActivity.URL, "user=" + user + "&pass=" + pass);
-                            //String status = result[0];
-                            //String hashS = result[1];
-                            //String MsgS = result[2];
-                            //String hashL = this.MD5_Hash(user + pass);
-
-                            //if (status.equals("1") && hashS.equals(hashL)) {
-                                //alertDialog.dismiss();
-                                //// Check();
-                                //Toast.makeText(context, MsgS, Toast.LENGTH_LONG).show();
-                            //} else {
-                                //textStatus.setTextColor(Color.rgb(255, 255, 0));
-                                //textStatus.setText(MsgS);
-                            //}
-                        //} catch (Exception e) {
-                            //textStatus.setTextColor(Color.rgb(200, 20, 20));
-                            //textStatus.setText(e.getMessage());
-                        //}
                     
 
                     //Requires okhttp dependency
-                public String[] login(String user, String pass) {
+                public String[] login(String user, String pass) throws IOException {
                     OkHttpClient client = new OkHttpClient();
                     RequestBody formBody = new FormBody.Builder()
                             .add("user", user)
@@ -286,7 +266,6 @@ public class MainActivity extends Activity {
                     return res.split("\\|");
                 }
 
-		
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
@@ -337,6 +316,7 @@ public class MainActivity extends Activity {
                         String hash = new BigInteger(1, m.digest()).toString(16);
                         return hash;
                     }
+		}
                 });
 
                 btnClose.setOnClickListener(new View.OnClickListener() {
