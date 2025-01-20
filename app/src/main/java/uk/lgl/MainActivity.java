@@ -37,11 +37,11 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.net.ssl.HttpsURLConnection;
 
-/*import okhttp3.FormBody;
+import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;*/
+import okhttp3.Response;
 
 public class MainActivity extends Activity {
 
@@ -265,7 +265,7 @@ public class MainActivity extends Activity {
                     Log.d("loginn ", res);
                     return res.split("\\|");
                 }
-		}
+
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
@@ -316,6 +316,7 @@ public class MainActivity extends Activity {
                         String hash = new BigInteger(1, m.digest()).toString(16);
                         return hash;
                     }
+		}
                 });
 
                 btnClose.setOnClickListener(new View.OnClickListener() {
