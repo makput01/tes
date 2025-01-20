@@ -1,7 +1,16 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"name": "Tes DevContainer",
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 	"features": {
-		"ghcr.io/ebaskoro/devcontainer-features/sdkman:1": {}
+		"ghcr.io/ebaskoro/devcontainer-features/sdkman:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {
+		  "version": "latest"
+		}
 	},
-	"postCreateCommand": "echo 'Hello World!'"
+	"customizations": {
+	
+	"codespaces": {
+		"disableAutomaticConfiguration": true
+	}
+}
 }
