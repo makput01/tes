@@ -1,4 +1,5 @@
 {
+	"name": "tes",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
 		"ghcr.io/ebaskoro/devcontainer-features/sdkman:1": {}
