@@ -267,7 +267,7 @@ public class MainActivity extends Activity {
                     
 
                     //Requires okhttp dependency
-                public String[] login(String user, String pass) {
+                public String[] login(String user, String pass) throws IOException {
                     OkHttpClient client = new OkHttpClient();
                     RequestBody formBody = new FormBody.Builder()
                             .add("user", user)
@@ -286,7 +286,7 @@ public class MainActivity extends Activity {
                     return res.split("\\|");
                 }
 
-		
+		}
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
