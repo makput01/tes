@@ -1,0 +1,2 @@
+/workspaces/tes/app/src/main/jni/Android.mk
+/workspaces/tes/app/src/main/jni/Application.mk
