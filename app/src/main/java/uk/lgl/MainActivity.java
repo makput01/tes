@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     public String GameActivity = "com.unity3d.player.UnityPlayerActivity";
     public boolean hasLaunched = false;
 
-    public static String URL = "https://example.com/login.php";
+    public static String URL = "http://verifmod.wuaze.com/login.php";
 
     //Load lib
     static {
@@ -265,6 +265,7 @@ public class MainActivity extends Activity {
                     Log.d("loginn ", res);
                     return res.split("\\|");
                 }
+
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
