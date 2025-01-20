@@ -37,11 +37,11 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import okhttp3.FormBody;
+/*import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.Response;*/
 
 public class MainActivity extends Activity {
 
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     public String GameActivity = "com.unity3d.player.UnityPlayerActivity";
     public boolean hasLaunched = false;
 
-    public static String URL = "http://verifmod.wuaze.com/login.php";
+    public static String URL = "https://example.com/login.php";
 
     //Load lib
     static {
@@ -244,30 +244,30 @@ public class MainActivity extends Activity {
                         edit.putBoolean("RememberMe", isChecked);
                         edit.apply();
 
-			//try {
-                            //// String[] result = this.login(user, pass);
-                            //String[] result = urlRequest(MainActivity.URL, "user=" + user + "&pass=" + pass);
-                            //String status = result[0];
-                            //String hashS = result[1];
-                            //String MsgS = result[2];
-                            //String hashL = this.MD5_Hash(user + pass);
+                        try {
+                            // String[] result = this.login(user, pass);
+                            String[] result = urlRequest(MainActivity.URL, "user=" + user + "&pass=" + pass);
+                            String status = result[0];
+                            String hashS = result[1];
+                            String MsgS = result[2];
+                            String hashL = this.MD5_Hash(user + pass);
 
-                            //if (status.equals("1") && hashS.equals(hashL)) {
-                                //alertDialog.dismiss();
-                                //// Check();
-                                //Toast.makeText(context, MsgS, Toast.LENGTH_LONG).show();
-                            //} else {
-                                //textStatus.setTextColor(Color.rgb(255, 255, 0));
-                                //textStatus.setText(MsgS);
-                            //}
-                        //} catch (Exception e) {
-                            //textStatus.setTextColor(Color.rgb(200, 20, 20));
-                            //textStatus.setText(e.getMessage());
-                        //}
-                    
+                            if (status.equals("1") && hashS.equals(hashL)) {
+                                alertDialog.dismiss();
+                                // Check();
+                                Toast.makeText(context, MsgS, Toast.LENGTH_LONG).show();
+                            } else {
+                                textStatus.setTextColor(Color.rgb(255, 255, 0));
+                                textStatus.setText(MsgS);
+                            }
+                        } catch (Exception e) {
+                            textStatus.setTextColor(Color.rgb(200, 20, 20));
+                            textStatus.setText(e.getMessage());
+                        }
+                    }
 
                     //Requires okhttp dependency
-                public String[] login(String user, String pass) throws IOException {
+                /*public String[] login(String user, String pass) throws IOException {
                     OkHttpClient client = new OkHttpClient();
                     RequestBody formBody = new FormBody.Builder()
                             .add("user", user)
@@ -284,9 +284,7 @@ public class MainActivity extends Activity {
                     String res = response.body().string();
                     Log.d("loginn ", res);
                     return res.split("\\|");
-                }
-
-		}
+                }*/
 
                     public String[] urlRequest(String str, String param) throws IOException {
                         URL url = new URL(str);
