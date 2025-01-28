@@ -99,7 +99,7 @@ Java_uk_lgl_modmenu_FloatingModMenuService_getFeatureList(JNIEnv *env, jobject a
     const char *features[] = {
             OBFUSCATE("Category_The Category"), //Not counted
             OBFUSCATE("Toggle_Speed Kenceng"), //0 Case
-            OBFUSCATE("Toggle_Kill cooldown"), //1 Case
+            OBFUSCATE("Toggle_skin unlock"), //1 Case
     };
 
     //Now you dont have to manually update the number everytime;
@@ -226,7 +226,7 @@ void *hack_thread(void *) {
                                                     OBFUSCATE("20 01 44 E3 1E FF 2F E1"));
     //You can also specify target lib like this
     hexPatches.Killcool = MemoryPatch::createWithHex(targetLibName,
-                                                     string2Offset(OBFUSCATE_KEY("0x10CE048", 'g')),
+                                                     string2Offset(OBFUSCATE_KEY("0xBEEE3C", '-')),
                                                      OBFUSCATE("00 00 A0 E3 1E FF 2F E1"));
     //Apply patches here if you don't use mod menu
     //hexPatches.GodMode.Modify();
