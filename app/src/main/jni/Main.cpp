@@ -98,7 +98,7 @@ Java_uk_lgl_modmenu_FloatingModMenuService_getFeatureList(JNIEnv *env, jobject a
 
     const char *features[] = {
             OBFUSCATE("Category_The Category"), //Not counted
-            OBFUSCATE("Toggle_Skin unlock"), //0 Case
+            OBFUSCATE("Toggle_Speed Kenceng"), //0 Case
             OBFUSCATE("Toggle_Kill cooldown"), //1 Case
     };
 
@@ -222,8 +222,8 @@ void *hack_thread(void *) {
 
     // New way to patch hex via KittyMemory without need to specify len. Spaces or without spaces are fine
     hexPatches.Skin = MemoryPatch::createWithHex(targetLibName,
-                                                    string2Offset(OBFUSCATE_KEY("0xBEEE3C", '-')),
-                                                    OBFUSCATE("00 00 A0 E3 1E FF 2F E1"));
+                                                    string2Offset(OBFUSCATE_KEY("0xE3D990", '-')),
+                                                    OBFUSCATE("12 04 40 E3 1E FF 2F E1"));
     //You can also specify target lib like this
     hexPatches.Killcool = MemoryPatch::createWithHex(targetLibName,
                                                      string2Offset(OBFUSCATE_KEY("0x10CE048", 'g')),
