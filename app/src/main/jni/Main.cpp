@@ -222,8 +222,8 @@ void *hack_thread(void *) {
 
     // New way to patch hex via KittyMemory without need to specify len. Spaces or without spaces are fine
     hexPatches.Skin = MemoryPatch::createWithHex(targetLibName,
-                                                    string2Offset(OBFUSCATE_KEY("0xE3D990", 'g')),
-                                                    OBFUSCATE("12 04 40 E3 1E FF 2F E1"));
+                                                    string2Offset(OBFUSCATE_KEY("0xE3D990", '-')),
+                                                    OBFUSCATE("20 01 44 E3 1E FF 2F E1"));
     //You can also specify target lib like this
     hexPatches.Killcool = MemoryPatch::createWithHex(targetLibName,
                                                      string2Offset(OBFUSCATE_KEY("0x10CE048", 'g')),
