@@ -219,6 +219,8 @@ void Changes(JNIEnv *env, jclass clazz, jobject obj,
             // MOV R0, #0x0 = 00 00 A0 E3
             // BX LR = 1E FF 2F E1
             PATCH_LIB_SWITCH("libil2cpp.so", "0x100000", "00 00 A0 E3 1E FF 2F E1", boolean);
+	    Toast(env, obj, OBFUSCATE("Button pressed"), ToastLength::LENGTH_SHORT);
+
             break;
         case 100:
             //Reminder that the strings are auto obfuscated
@@ -233,8 +235,12 @@ void Changes(JNIEnv *env, jclass clazz, jobject obj,
             RESTORE_LIB("libil2cpp.so", "0x400000");
             RESTORE_SYM("_SymbolExample");
             RESTORE_LIB_SYM("libil2cpp.so", "_SymbolExample");
+	    Toast(env, obj, OBFUSCATE("Button pressed"), ToastLength::LENGTH_SHORT);
+
             break;
         case 110:
+	    Toast(env, obj, OBFUSCATE("Button pressed"), ToastLength::LENGTH_SHORT);
+
             break;
         case 1:
             if (value >= 1) {
