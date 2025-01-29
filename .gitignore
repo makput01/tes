@@ -1,5 +1,5 @@
 .gradle
-*.cxx
+**/.cxx
 **/generated
 **/inter*
 **/logs
