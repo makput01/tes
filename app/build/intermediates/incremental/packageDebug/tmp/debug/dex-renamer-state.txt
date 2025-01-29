@@ -1,4 +1,0 @@
-#Wed Jan 29 07:40:30 UTC 2025
-base.0=/workspaces/tes/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
