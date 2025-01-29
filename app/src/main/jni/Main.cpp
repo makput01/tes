@@ -16,7 +16,7 @@
 #include "Menu/Setup.h"
 
 //Target lib here
-#define targetLibName OBFUSCATE("libil2cpp.so")
+#define targetLibName OBFUSCATE("libFileA.so")
 
 #include "Includes/Macros.h"
 
@@ -27,7 +27,6 @@ void *instanceBtn;
 // Hooking examples. Assuming you know how to write hook
 void (*AddMoneyExample)(void *instance, int amount);
 
-/*
 bool (*old_get_BoolExample)(void *instance);
 bool get_BoolExample(void *instance) {
     if (instance != NULL && featureHookToggle) {
@@ -62,7 +61,6 @@ void FunctionExample(void *instance) {
     }
     return old_FunctionExample(instance);
 }
-*/
 
 // we will run our hacks in a new thread so our while loop doesn't block process main thread
 void *hack_thread(void *) {
@@ -84,7 +82,6 @@ void *hack_thread(void *) {
 #if defined(__aarch64__) //To compile this code for arm64 lib only. Do not worry about greyed out highlighting code, it still works
     // Hook example. Comment out if you don't use hook
     // Strings in macros are automatically obfuscated. No need to obfuscate!
-    /*
     HOOK("str", FunctionExample, old_FunctionExample);
     HOOK_LIB("libFileB.so", "0x123456", FunctionExample, old_FunctionExample);
     HOOK_NO_ORIG("0x123456", FunctionExample);
@@ -97,14 +94,13 @@ void *hack_thread(void *) {
     // Patching offsets directly. Strings are automatically obfuscated too!
     PATCH("0x20D3A8", "00 00 A0 E3 1E FF 2F E1");
     PATCH_LIB("libFileB.so", "0x20D3A8", "00 00 A0 E3 1E FF 2F E1");
-*/
+
     AddMoneyExample = (void(*)(void *,int))getAbsoluteAddress(targetLibName, 0x123456);
 
 #else //To compile this code for armv7 lib only.
 
     // Hook example. Comment out if you don't use hook
     // Strings in macros are automatically obfuscated. No need to obfuscate!
-    /*
     HOOK("str", FunctionExample, old_FunctionExample);
     HOOK_LIB("libFileB.so", "0x123456", FunctionExample, old_FunctionExample);
     HOOK_NO_ORIG("0x123456", FunctionExample);
@@ -121,7 +117,7 @@ void *hack_thread(void *) {
     //Restore changes to original
     RESTORE("0x20D3A8");
     RESTORE_LIB("libFileB.so", "0x20D3A8");
-*/
+
     AddMoneyExample = (void (*)(void *, int)) getAbsoluteAddress(targetLibName, 0x123456);
 
     LOGI(OBFUSCATE("Done"));
