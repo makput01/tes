@@ -1,18 +1,20 @@
 {
-  "version": 2,
+  "version": 3,
   "artifactType": {
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "uk.lgl.modmenu",
-  "variantName": "processDebugResources",
+  "applicationId": "com.android.support",
+  "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
+      "attributes": [],
       "versionCode": 1,
-      "versionName": "2.3",
+      "versionName": "3.2",
       "outputFile": "resources-debug.ap_"
     }
-  ]
+  ],
+  "elementType": "File"
 }

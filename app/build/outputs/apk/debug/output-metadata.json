@@ -1,31 +1,15 @@
 {
-<<<<<<< HEAD
-  "version": 2,
-=======
   "version": 3,
->>>>>>> 2f0678e8907b8720c8f985babebadcc476b3fd93
   "artifactType": {
     "type": "APK",
     "kind": "Directory"
   },
-<<<<<<< HEAD
-  "applicationId": "uk.lgl.modmenu",
-  "variantName": "processDebugResources",
-=======
   "applicationId": "com.android.support",
   "variantName": "debug",
->>>>>>> 2f0678e8907b8720c8f985babebadcc476b3fd93
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-<<<<<<< HEAD
-      "versionCode": 1,
-      "versionName": "2.3",
-      "outputFile": "app-debug.apk"
-    }
-  ]
-=======
       "attributes": [],
       "versionCode": 1,
       "versionName": "3.2",
@@ -33,5 +17,4 @@
     }
   ],
   "elementType": "File"
->>>>>>> 2f0678e8907b8720c8f985babebadcc476b3fd93
 }

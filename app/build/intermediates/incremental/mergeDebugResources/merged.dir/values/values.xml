@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="backgroundColor">#202020</color>
+    <color name="ic_launcher_background">#0277BD</color>
     <string name="app_name">LGL Mod Menu</string>
     <style name="AppTheme" parent="@android:style/Theme.Material">
         <!-- Customize your theme here. -->
