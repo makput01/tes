@@ -1,0 +1,14 @@
+Executable : C:\SDK\ndk\22.0.7026061\ndk-build.cmd
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=C:\Users\DELL\AndroidStudioProjects\fsd\app\src\main\jni\Android.mk
+NDK_APPLICATION_MK=C:\Users\DELL\AndroidStudioProjects\fsd\app\src\main\jni\Application.mk
+APP_ABI=x86
+NDK_ALL_ABIS=x86
+NDK_DEBUG=1
+APP_PLATFORM=android-19
+NDK_OUT=C:/Users/DELL/AndroidStudioProjects/fsd/app/build/intermediates/ndkBuild/debug/obj
+NDK_LIBS_OUT=C:\Users\DELL\AndroidStudioProjects\fsd\app\build\intermediates\ndkBuild\debug\lib
+MyLibName
+jvmArgs : 
+

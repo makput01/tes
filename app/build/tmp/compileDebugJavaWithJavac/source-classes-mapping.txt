@@ -1,0 +1,36 @@
+uk/lgl/BuildConfig.java
+ uk.lgl.BuildConfig
+uk/lgl/modmenu/Preferences.java
+ uk.lgl.modmenu.Preferences
+uk/lgl/MainActivity.java
+ uk.lgl.MainActivity
+ uk.lgl.MainActivity$1
+ uk.lgl.MainActivity$2
+ uk.lgl.MainActivity$3
+uk/lgl/modmenu/FloatingModMenuService.java
+ uk.lgl.modmenu.FloatingModMenuService
+ uk.lgl.modmenu.FloatingModMenuService$1
+ uk.lgl.modmenu.FloatingModMenuService$10
+ uk.lgl.modmenu.FloatingModMenuService$11
+ uk.lgl.modmenu.FloatingModMenuService$12
+ uk.lgl.modmenu.FloatingModMenuService$13
+ uk.lgl.modmenu.FloatingModMenuService$14
+ uk.lgl.modmenu.FloatingModMenuService$15
+ uk.lgl.modmenu.FloatingModMenuService$15$1
+ uk.lgl.modmenu.FloatingModMenuService$15$2
+ uk.lgl.modmenu.FloatingModMenuService$15$3
+ uk.lgl.modmenu.FloatingModMenuService$16
+ uk.lgl.modmenu.FloatingModMenuService$17
+ uk.lgl.modmenu.FloatingModMenuService$18
+ uk.lgl.modmenu.FloatingModMenuService$2
+ uk.lgl.modmenu.FloatingModMenuService$3
+ uk.lgl.modmenu.FloatingModMenuService$4
+ uk.lgl.modmenu.FloatingModMenuService$5
+ uk.lgl.modmenu.FloatingModMenuService$6
+ uk.lgl.modmenu.FloatingModMenuService$7
+ uk.lgl.modmenu.FloatingModMenuService$8
+ uk.lgl.modmenu.FloatingModMenuService$9
+ uk.lgl.modmenu.FloatingModMenuService$EditTextNum
+ uk.lgl.modmenu.FloatingModMenuService$EditTextString
+uk/lgl/modmenu/Logcat.java
+ uk.lgl.modmenu.Logcat

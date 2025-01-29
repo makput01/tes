@@ -1,0 +1,12 @@
+[arm64-v8a] Compile++      : MyLibName <= Main.cpp
+[arm64-v8a] Compile        : MyLibName <= hde64.c
+[arm64-v8a] Compile++      : MyLibName <= SubstrateDebug.cpp
+[arm64-v8a] Compile++      : MyLibName <= SubstrateHook.cpp
+[arm64-v8a] Compile++      : MyLibName <= SubstratePosixMemory.cpp
+[arm64-v8a] Compile++      : MyLibName <= SymbolFinder.cpp
+[arm64-v8a] Compile++      : MyLibName <= KittyMemory.cpp
+[arm64-v8a] Compile++      : MyLibName <= MemoryPatch.cpp
+[arm64-v8a] Compile++      : MyLibName <= MemoryBackup.cpp
+[arm64-v8a] Compile++      : MyLibName <= KittyUtils.cpp
+[arm64-v8a] Compile++      : MyLibName <= And64InlineHook.cpp
+[arm64-v8a] SharedLibrary  : libMyLibName.so

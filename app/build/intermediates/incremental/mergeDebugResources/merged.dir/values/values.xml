@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#202020</color>
+    <string name="app_name">LGL Mod Menu</string>
+    <style name="AppTheme" parent="@android:style/Theme.Material">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/backgroundColor</item>
+    </style>
+</resources>
