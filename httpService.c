@@ -152,7 +152,7 @@ struct HTTPInfo HTTPSClient(const char *website) {
   }
   read_buffer[info.bufferLen] = '\0';
   info.buffer = read_buffer;
-  SSL_CTX_free(context);
+  tls_destroy_context(context);
   return info;
 }
 
@@ -196,18 +196,20 @@ void *HTTPSServer(void *unused) {
 
   c = sizeof(struct sockaddr_in);
 
-  SSL *server_ctx = SSL_CTX_new(SSLv3_server_method());
+  struct TLSContext *server_ctx = tls_create_context(1, TLS_V12);
 
   if (!server_ctx) {
     printf("[HTTPService Server] Error: creating server context");
     exit(-1);
   }
 
-  tls_load_certificates(server_ctx, certPem, strlen(certPem));
-  tls_load_private_key(server_ctx, keyPem, strlen(keyPem));
+  if (tls_load_certificates(server_ctx, certPem, strlen(certPem)) <= 0) {
+    printf("[HTTPService Server] Error: certificate not loaded\n");
+    exit(-2);
+  }
 
-  if (!SSL_CTX_check_private_key(server_ctx)) {
-    printf("[HTTPService Server] Error: Private key not loaded\n");
+  if (tls_load_private_key(server_ctx, keyPem, strlen(keyPem)) <= 0) {
+    printf("[HTTPService Server] Error: private key not loaded\n");
     exit(-2);
   }
 
@@ -218,23 +220,45 @@ void *HTTPSServer(void *unused) {
 
     if (client_sock < 0) {
       printf("[HTTPService Server] Error: Accept failed\n");
-      exit(-3);
+      continue;
     }
 
-    SSL *client = SSL_new(server_ctx);
-    if (!client) {
-      printf("[HTTPService Server] Error: Error creating SSL Client");
-      exit(-4);
+    struct TLSContext *client_ctx = tls_accept(server_ctx);
+    if (!client_ctx) {
+        printf("[HTTPService Server] Error: Error creating client context\n");
+        close(client_sock);
+        continue;
     }
 
-    SSL_set_fd(client, client_sock);
+    while (!tls_established(client_ctx)) {
+        unsigned char buffer[4096];
+        int bytes_read = recv(client_sock, (char *)buffer, sizeof(buffer), 0);
 
-    if (SSL_accept(client)) {
-      if (SSL_write(client, msg, strlen(msg)) < 0)
-        printf("[HTTPService Server] Error: in SSL Write\n");
-    } else
-      printf("[HTTPService Server] Error: in handshake\n");
-    SSL_shutdown(client);
+        if (bytes_read <= 0) {
+            break;
+        }
+
+        if (tls_consume_stream(client_ctx, buffer, bytes_read, NULL) < 0) {
+            printf("[HTTPService Server] Error: in handshake\n");
+            break;
+        }
+
+        if (send_pending(client_sock, client_ctx) < 0) {
+             printf("[HTTPService Server] Error: send failed during handshake\n");
+             break;
+        }
+    }
+
+    if (tls_established(client_ctx)) {
+        tls_write(client_ctx, (unsigned char *)msg, strlen(msg));
+        if (send_pending(client_sock, client_ctx) < 0) {
+            printf("[HTTPService Server] Error: in SSL Write\n");
+        }
+    }
+
+    tls_close_notify(client_ctx);
+    send_pending(client_sock, client_ctx);
+
 #ifdef _WIN32
     Sleep(500);
 #else
@@ -247,7 +271,7 @@ void *HTTPSServer(void *unused) {
     shutdown(client_sock, SHUT_RDWR);
     close(client_sock);
 #endif
-    SSL_free(client);
+    tls_destroy_context(client_ctx);
   }
-  SSL_CTX_free(server_ctx);
+  tls_destroy_context(server_ctx);
 }
