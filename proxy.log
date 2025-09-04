@@ -1,0 +1,8 @@
+[GTProxy Configuration] Using Server data: true
+[GTProxy Configuration] Server Data IP: 2.17.198.162
+[GTProxy Configuration] Using new packet: true
+[GTProxy Configuration] HTTPS Port: 8080
+[GTProxy Configuration] Skip gazette: true
+[GTProxy Configuration] Is Spoofed: false
+[GTProxy Configuration] Configuration has been loaded!
+[HTTPService Server] Log: HTTPS Server is enabled
