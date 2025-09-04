@@ -128,9 +128,9 @@ int main() {
 
     if (!HTTPAlreadyOn) {
         #ifdef __WIN32
-        HTTPThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)HTTPSServer, NULL, 0, NULL);
+        HTTPThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)http_server, NULL, 0, NULL);
         #else
-        pthread_create(&HTTPThread, NULL, HTTPSServer, NULL);
+        pthread_create(&HTTPThread, NULL, http_server, NULL);
         #endif // __WIN32
         HTTPAlreadyOn = 1;
     }

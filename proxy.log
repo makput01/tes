@@ -5,4 +5,4 @@
 [GTProxy Configuration] Skip gazette: true
 [GTProxy Configuration] Is Spoofed: false
 [GTProxy Configuration] Configuration has been loaded!
-[HTTPService Server] Log: HTTPS Server is enabled
+[HTTP Server] Log: HTTP Server is enabled, listening on port 8081
