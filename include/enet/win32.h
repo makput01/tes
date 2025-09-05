@@ -2,6 +2,7 @@
  @file  win32.h
  @brief ENet Win32 header
 */
+#ifdef _WIN32
 #ifndef __ENET_WIN32_H__
 #define __ENET_WIN32_H__
 
@@ -11,16 +12,20 @@
 #pragma warning (disable: 4244) // 64bit to 32bit int
 #pragma warning (disable: 4018) // signed/unsigned mismatch
 #pragma warning (disable: 4146) // unary minus operator applied to unsigned type
+<<<<<<<< HEAD:include/enet/win32.h
 #ifndef _CRT_SECURE_NO_DEPRECATE
 #define _CRT_SECURE_NO_DEPRECATE
 #endif
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
+========
+>>>>>>>> refs/remotes/origin/master:enetproxy/proxy/enet/include/win32.h
 #endif
 #endif
 #endif
 
 #include <stdlib.h>
+#include <stdint.h>
 #include <winsock2.h>
 
 typedef SOCKET ENetSocket;
@@ -59,5 +64,4 @@ typedef fd_set ENetSocketSet;
 #define ENET_SOCKETSET_CHECK(sockset, socket)  FD_ISSET (socket, & (sockset))
 
 #endif /* __ENET_WIN32_H__ */
-
-
+#endif

@@ -68,12 +68,20 @@ typedef struct _ENetProtocolHeader
    enet_uint16 sentTime;
 } ENET_PACKED ENetProtocolHeader;
 
+<<<<<<<< HEAD:include/enet/protocol.h
 typedef struct _ENetNewProtocolHeader
 {
     enet_uint16 integrity[3];
     enet_uint16 peerID;
     enet_uint16 sentTime;
 } ENET_PACKED ENetNewProtocolHeader;
+========
+typedef struct _ENetProtocolHeaderUbisoft {
+    enet_uint16 integrity[3];
+    enet_uint16 peerID;
+    enet_uint16 sentTime;
+} ENET_PACKED ENetProtocolHeaderUbisoft;
+>>>>>>>> refs/remotes/origin/master:enetproxy/proxy/enet/include/protocol.h
 
 typedef struct _ENetProtocolCommandHeader
 {
