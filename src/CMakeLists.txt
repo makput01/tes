@@ -42,11 +42,11 @@ find_package(fmt REQUIRED)
 find_package(magic_enum REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(OpenSSL REQUIRED)
-find_package(unofficial-libmariadb REQUIRED)
 find_path(HTTPLIB_INCLUDE_DIR   "httplib.h")
 
 target_include_directories(${PROJECT_NAME} PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/libraries
     ${HTTPLIB_INCLUDE_DIR}
 )
 
@@ -55,8 +55,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     magic_enum::magic_enum
     spdlog::spdlog
     OpenSSL::SSL
-    unofficial::libmariadb
-    sqlpp11::sqlpp11
     Pal::Sigslot
     enet
 )

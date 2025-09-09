@@ -1,27 +1,30 @@
 #pragma once
-#include <algorithm>
-#include <sqlpp11/sqlpp11.h>
-#include <sqlpp11/mysql/mysql.h>
-#include <Manager/Database/Table/PlayerTable.hpp>
 
-enum eDatabaseTable {
-    DATABASE_PLAYER_TABLE
-};
+#include <string>
+#include <vector>
+#include "nlohmann_json/json.hpp"
+
+#include "Player/PlayerData.hpp"
 
 class Database {
-public:
-    bool Connect();
-
-    sqlpp::mysql::connection* GetConnection();
-    void* GetTable(eDatabaseTable table);
-
 public:
     Database() = default;
     ~Database() = default;
 
+    bool Connect(); // Will load players.json
+
+    bool FindPlayer(const std::string& tank_id_name, PlayerData& result);
+    bool InsertPlayer(const PlayerData& data);
+    bool UpdatePlayer(const PlayerData& data);
+
+    PlayerRegistration RegisterPlayer(const std::string& name, const std::string& password, const std::string& verifyPassword);
+
 private:
-    sqlpp::mysql::connection* m_pConnection     {   nullptr   };
-    PlayerTable* m_pPlayerTable                 {   nullptr   };
+    void load_database();
+    void save_database();
+
+    nlohmann::json m_player_database;
+    const std::string m_player_database_path = "players.json";
 };
 
 Database* GetDatabase();
